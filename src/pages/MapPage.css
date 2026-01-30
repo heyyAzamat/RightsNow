@@ -1,0 +1,243 @@
+.map-page {
+  min-height: calc(100vh - 80px);
+  padding: 40px 0;
+}
+
+.map-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.map-controls {
+  margin-bottom: 24px;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 12px 24px;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  border-color: transparent;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.map-container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.map-wrapper {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  min-height: 600px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.map-tooltip {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 4px 12px var(--shadow-lg);
+}
+
+.country-details {
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 24px;
+  max-height: 600px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px var(--shadow-lg);
+}
+
+.country-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.country-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
+
+.violation-item {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.violation-item:last-child {
+  border-bottom: none;
+}
+
+.violation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.violation-category {
+  font-weight: 600;
+  color: var(--text);
+  padding-left: 12px;
+}
+
+.violation-count {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.violation-examples {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.violation-examples strong {
+  color: var(--text);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.violation-examples ul {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+.violation-examples li {
+  margin-bottom: 4px;
+}
+
+.map-legend {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.map-legend h3 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+}
+
+.legend-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.legend-marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ef4444;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+@media (max-width: 968px) {
+  .map-container {
+    grid-template-columns: 1fr;
+  }
+
+  .country-details {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .map-wrapper {
+    min-height: 400px;
+    padding: 12px;
+  }
+
+  .category-filters {
+    flex-direction: column;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+}
