@@ -11,7 +11,7 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <span className="logo-icon">⚖️</span>
+            <img src="/logo.svg" alt="RightsNow" className="logo-img" />
             <span className="logo-text">RightsNow</span>
           </Link>
           <nav className="nav">

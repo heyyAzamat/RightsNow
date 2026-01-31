@@ -174,21 +174,21 @@ function MapPage() {
                         <Geography
                           key={geo.rsmKey}
                           geography={geo}
-                          fill={hasViolations ? '#3b82f6' : '#e2e8f0'}
+                          fill={hasViolations ? '#FF9500' : '#e2e8f0'}
                           stroke="#cbd5e1"
                           strokeWidth={0.5}
                           style={{
                             default: {
-                              fill: hasViolations ? '#3b82f6' : '#e2e8f0',
+                              fill: hasViolations ? '#FF9500' : '#e2e8f0',
                               outline: 'none',
                               cursor: hasViolations ? 'pointer' : 'default',
                             },
                             hover: {
-                              fill: hasViolations ? '#60a5fa' : '#cbd5e1',
+                              fill: hasViolations ? '#FFB340' : '#cbd5e1',
                               outline: 'none',
                             },
                             pressed: {
-                              fill: hasViolations ? '#2563eb' : '#94a3b8',
+                              fill: hasViolations ? '#E68600' : '#94a3b8',
                               outline: 'none',
                             },
                           }}
@@ -218,7 +218,7 @@ function MapPage() {
                       <circle
                         r={Math.min(Math.max(getTotalViolations(countryCode) / 5, 3), 12)}
                         fill={selectedCategory 
-                          ? getCategoryById(selectedCategory)?.color || '#3b82f6'
+                          ? getCategoryById(selectedCategory)?.color || '#FF9500'
                           : '#ef4444'
                         }
                         opacity={0.7}
@@ -284,7 +284,7 @@ function MapPage() {
           <h3>Легенда</h3>
           <div className="legend-items">
             <div className="legend-item">
-              <div className="legend-color" style={{ background: '#3b82f6' }}></div>
+              <div className="legend-color" style={{ background: '#FF9500' }}></div>
               <span>Страны с зарегистрированными нарушениями</span>
             </div>
             <div className="legend-item">

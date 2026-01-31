@@ -2,7 +2,7 @@
 // ISO 3166-1 alpha-2 коды стран для карты
 
 export const VIOLATION_CATEGORIES = [
-  { id: 'freedom', label: 'Свобода слова и собраний', color: '#3b82f6' },
+  { id: 'freedom', label: 'Свобода слова и собраний', color: '#FF9500' },
   { id: 'discrimination', label: 'Дискриминация', color: '#ef4444' },
   { id: 'torture', label: 'Пытки и жестокое обращение', color: '#dc2626' },
   { id: 'fair_trial', label: 'Право на справедливый суд', color: '#f59e0b' },

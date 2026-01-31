@@ -30,8 +30,11 @@
   transform: scale(1.05);
 }
 
-.logo-icon {
-  font-size: 32px;
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
 }
 
 .nav {
